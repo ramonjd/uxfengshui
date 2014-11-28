@@ -1,7 +1,7 @@
 uxfengshui
 ==========
 
-A one-pager 'business card' using famo.us and angular for a friend. Nothing flash. 
+A one-pager 'business card' using famo.us and angular. Nothing flash. 
 
 `bower install`
 `npm install`
