@@ -1,5 +1,5 @@
-angular.module('uxFengShui',['famous.angular'])
-  .controller('UxFengShuiCtrl', ['$scope', '$famous', function($scope, $famous) {
+angular.module('webFengShui',['famous.angular'])
+  .controller('WebFengShuiCtrl', ['$scope', '$famous', function($scope, $famous) {
 
     var Transitionable = $famous['famous/transitions/Transitionable'];
     var Easing = $famous['famous/transitions/Easing'];
