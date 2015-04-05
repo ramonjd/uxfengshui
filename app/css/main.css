@@ -1,159 +1,227 @@
-
 @import url(http://fonts.googleapis.com/css?family=Archivo+Narrow);
+
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline; }
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
 
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
-  display: block; }
+    display: block;
+}
 
 body {
-  line-height: 1; }
+    line-height: 1;
+}
 
 ol, ul {
-  list-style: none; }
+    list-style: none;
+}
 
 blockquote, q {
-  quotes: none; }
+    quotes: none;
+}
 
 blockquote:before, blockquote:after, q:before, q:after {
-  content: '';
-  content: none; }
+    content: '';
+    content: none;
+}
 
 table {
-  border-collapse: collapse;
-  border-spacing: 0; }
+    border-collapse: collapse;
+    border-spacing: 0;
+}
 
 /** Border-box */
 *, *:before, *:after {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box; }
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
 
 /** Clearfix */
 .cf:before, .cf:after {
-  content: " ";
-  /* 1 */
-  display: table;
-  /* 2 */ }
-
-.cf:after {
-  clear: both; }
-
-.cf {
-  *zoom: 1; }
-
-body {
-  color: #444;
-  background-color: #eaebdf;
-  font-family: 'Archivo Narrow', sans-serif;
-  padding:5em;
-  height:100%;
-  width:100%;
+    content: " ";
+    /* 1 */
+    display: table;
+    /* 2 */
 }
 
+.cf:after {
+    clear: both;
+}
+
+.cf {
+    *zoom: 1;
+}
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    color: #444;
+    background-color: #eaebdf;
+    font-family: 'Archivo Narrow', sans-serif;
+    padding: 5em;
+}
 
 body::after {
-  content: "";
-  background: url(../img/palm.jpg) no-repeat center center fixed; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  opacity: 0.1;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  position: fixed;
-  z-index: -1;   
+    content: "";
+    background-image: url(../img/palm.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    opacity: 0.1;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: fixed;
+    z-index: -2;
 }
 
 header,
 footer,
 section {
-  text-align: center;
-  position:relative;
+    text-align: center;
+    position: relative;
 }
 
 h1 {
-  font-size:80px;
-  margin:0 auto;
-  color:#222;
+    font-size: 80px;
+    margin: 0 auto;
+    color: #222;
+}
+
+h1 > span {
+    color:#fff;
 }
 
 h2 {
-  font-size:25px;
-  font-weight:300;
+    font-size: 25px;
+    font-weight: 300;
+    margin-bottom: 10px;
+}
+
+h3 {
+    font-size: 19px;
+    font-weight: 300;
+    margin-bottom: 10px;
+}
+.shade {
+    background: -moz-linear-gradient(top,  #000222 0%, #4b637c 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#000222), color-stop(100%,#4b637c));
+    background: -webkit-linear-gradient(top,  #000222 0%,#4b637c 100%);
+    background: -o-linear-gradient(top,  #000222 0%,#4b637c 100%);
+    background: -ms-linear-gradient(top,  #000222 0%,#4b637c 100%);
+    background: linear-gradient(top,  #000222 0%,#4b637c 100%);
+    height:100%;
+    width:100%;
+    position: fixed;
+    top:0;
+    left:0;
+    opacity:.7;
+    z-index:-1;
+    -webkit-transition: all 1s ease-out;
+    -moz-transition: all 1s ease-out;
+    -ms-transition: all 1s ease-out;
+    -o-transition: all 1s ease-out;
+    transition: all 1s ease-out;
+}
+.shade.fade-out {
+    opacity:0;
 }
 
 #main {
-    padding:0.5em;
-    height:160px;
+    padding: 0.5em;
+    height: 160px;
 }
 
 footer > nav {
-  margin:0 auto;
+    margin: 0 auto;
 }
 
 footer > nav li {
-  display:inline-block;
-  margin:.5em;
+    display: inline-block;
+    margin: .5em;
 }
 
 footer > nav li > a {
-  color: #444;
-  text-decoration:none;
-  -webkit-transition: all .15s ease-in-out;
-  -moz-transition: all .15s ease-in-out;
-  -ms-transition: all .15s ease-in-out;
-  -o-transition: all .15s ease-in-out;
-  transition: all .15s ease-in-out;
+    color: #444;
+    text-decoration: none;
+    -webkit-transition: all .15s ease-in-out;
+    -moz-transition: all .15s ease-in-out;
+    -ms-transition: all .15s ease-in-out;
+    -o-transition: all .15s ease-in-out;
+    transition: all .15s ease-in-out;
 }
 
 footer > nav li > a:hover {
-  color: #222;
+    color: #222;
 }
 
-      
-.size-12 { font-size: 12px; }
+.size-12 {
+    font-size: 12px;
+}
 
-.size-14 { font-size: 14px; }
+.size-14 {
+    font-size: 14px;
+}
 
-.size-16 { font-size: 16px; }
+.size-16 {
+    font-size: 16px;
+}
 
-.size-18 { font-size: 18px; }
+.size-18 {
+    font-size: 18px;
+}
 
-.size-21 { font-size: 21px; }
+.size-21 {
+    font-size: 21px;
+}
 
-.size-24 { font-size: 24px; }
+.size-24 {
+    font-size: 24px;
+}
 
-.size-36 { font-size: 36px; }
+.size-36 {
+    font-size: 36px;
+}
 
-.size-48 { font-size: 48px; }
+.size-48 {
+    font-size: 48px;
+}
 
-.size-60 { font-size: 60px; }
+.size-60 {
+    font-size: 60px;
+}
 
-.size-72 { font-size: 72px; }
-
+.size-72 {
+    font-size: 72px;
+}
 
 @media (max-width: 600px) {
-  h1 {
-    font-size:70px;
-  }
+    h1 {
+        font-size: 70px;
+    }
 
-  h2 {
-    font-size:18px;
-  }
+    h2 {
+        font-size: 18px;
+    }
 
-  .size-48 { 
-    font-size: 38px; 
-  }
+    .size-48 {
+        font-size: 38px;
+    }
 
 }
 
